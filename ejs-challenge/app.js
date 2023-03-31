@@ -22,9 +22,9 @@ let posts = []
 app.get('/', function (req, res) {
   
   res.render("home", {
-    startingContent: homeStartingContent
+    startingContent: homeStartingContent,
+    userPosts: posts
   })
-  console.log(posts)
 })
 
 app.get('/about', function (req, res) {
