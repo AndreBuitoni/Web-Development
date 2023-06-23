@@ -5,8 +5,8 @@
 
 <% userPosts.forEach(function(post) { %>
 
-    <h2> <%= post.postTitle %> </h2>
-    <p> <%= post.postBody %> </p>
+  <h2> <%= post.postTitle %> </h2>
+  <p> <%= post.postBody.substring(0, 100) + ' ...' %> </p>
     
 <% }) %>
 
