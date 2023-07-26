@@ -1,0 +1,5 @@
+Vamos aprender a utilizar o método UPDATE
+
+O método UPDATE é utilizado com 2 parâmetros. O primeiro parâmetro informa qual documento será atualizado e o segundo parâmetro informa qual é a atualização a ser feita:
+
+db.products.updateOne({_id: 1}, {$set: {stock: 32}}) -> Com este código estamos criando um novo campo chamado stock, dentro do documento com _id: 1 e já atribuindo o valor 32 para o novo campo stock.

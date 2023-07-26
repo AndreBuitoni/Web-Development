@@ -1,0 +1,12 @@
+db.products.find() -> irá encontrar todos os documentos dentro da coleção products
+db.products.find({name: "Pencil"}) -> Filtra documentos com o nome Pencil
+db.products.find({price: {$gt: 1}}) -> Filtra documentos com preço acima de 1
+
+Até agora estávamos utilizando apenas o primeiro parâmetro na busca, e sempre recebemos o documento inteiro como retorno.
+No exemplo a seguir, vamos colocar um segundo parâmetro, indicando qual atributo queremos receber como resposta da busca, e somente iremos obter aquele parâmetro como resposta.
+
+db.products.find({_id: 1}, {name: 1}) -> Neste caso o número 1 de name significa true, o que indica que queremos receber esse valor como resposta da busca.
+
+No método find() o _id sempre vem na resposta como padrão. Para remover o _id da resposta podemos colocar o valor dele como zero (false) no segundo parâmetro da pesquisa:
+
+db.products.find({_id: 1}, {name: 1, _id: 0})
